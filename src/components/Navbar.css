@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Bowlby+One+SC&display=swap');
+
+
+.retro-navbar {
+  font-family: 'Black Ops One', cursive; 
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 0.5rem 0;   /* reduce vertical padding */
+  background-color: #302f2f;
+}
+
+/* Logo */
+.retro-brand {
+  font-size: 1.2rem;   /* smaller than before */
+  font-weight: 700;
+  color: #FDEECF !important;
+  gap: 0.4rem;
+}
+
+.logo-circle {
+  width: 10px;   /* smaller circles */
+  height: 10px;
+}
+
+/* Nav links */
+.retro-link {
+  color: #FDEECF !important;
+  margin: 0 0.5rem;       /* tighter spacing */
+  font-size: 0.9rem;      /* smaller text */
+  transition: all 0.2s ease-in-out;
+}
+
+.retro-link:hover {
+  color: #D94E3D !important;
+  transform: skew(-5deg);
+}
+
+/* Buttons */
+.login-btn,
+.register-btn {
+  font-size: 0.85rem;      /* smaller font */
+  padding: 0.25rem 0.6rem; /* smaller buttons */
+  margin-left: 0.5rem;
+}
+
+.register-btn {
+  background: #C0392B;
+  color: #fff !important;
+}
+
+.register-btn:hover {
+  background: #D94E3D;
+}
