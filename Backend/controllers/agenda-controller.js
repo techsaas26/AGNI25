@@ -1,6 +1,6 @@
 import Agenda from '../models/Agenda.js';
 
-const uploadAgenda = async (req, res) => {
+export const uploadAgenda = async (req, res) => {
   try {
     const { description } = req.body;
     const date = req.body.date || new Date().toISOString().slice(0, 10);
@@ -17,7 +17,7 @@ const uploadAgenda = async (req, res) => {
   }
 }
 
-const getAgendaByDate = async (req, res) => {
+export const getAgendaByDate = async (req, res) => {
   try {
     const date = req.query.date || new Date().toISOString().slice(0, 10);
     const agenda = await Agenda.findOne({ date });
@@ -28,7 +28,7 @@ const getAgendaByDate = async (req, res) => {
   }
 }
 
-const getAllAgendas = async (req, res) => {
+export const getAllAgendas = async (req, res) => {
   try {
     const agendas = await Agenda.find().sort({ date: 1 });
     res.json(agendas);
@@ -36,9 +36,3 @@ const getAllAgendas = async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 }
-
-export default {
-  uploadAgenda,
-  getAgendaByDate,
-  getAllAgendas
-};

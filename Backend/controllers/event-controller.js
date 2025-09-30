@@ -1,6 +1,6 @@
 import Event from '../models/Event.js';
 
-const uploadEvent = async (req, res) => {
+export const uploadEvent = async (req, res) => {
   try {
     const { title, description, date, venue, type, day, time } = req.body;
     const imageUrl = req.file.path;
@@ -13,7 +13,7 @@ const uploadEvent = async (req, res) => {
   }
 };
 
-const getAllEvents = async (req, res) => {
+export const getAllEvents = async (req, res) => {
   try {
     const filter = {};
     if (req.query.type) filter.type = req.query.type;
@@ -26,8 +26,3 @@ const getAllEvents = async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 };
-
-export default {
-  uploadEvent,
-  getAllEvents,
-}; 

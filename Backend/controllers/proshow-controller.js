@@ -1,35 +1,38 @@
 import Proshow from "../models/Proshow.js";
 
-const uploadProshow = async (req, res) => {
+export const uploadProshow = async (req, res) => {
   try {
-    const { title, description, date, venue } = req.body;
-    const imageUrl = req.file.path;
+    const { name, imgUrl, date } = req.body;
 
-    const proShow = await Proshow.create({
-      title,
-      description,
-      date,
-      venue,
-      imageUrl,
-    });
+    if (!name || !imgUrl) {
+      return res.status(400).json({ error: "Name and Image URL are required" });
+    }
 
-    res.status(201).json(proShow);
+    try {
+      const proShow = await Proshow.create({
+        name,
+        imgUrl,
+        date,
+      });
+
+      res.status(201).json({
+        success: true,
+        proShow,
+      });
+    } catch (e) {
+      console.log(e);
+      res.status(500).json({ error: "Server Error" });
+    }
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
 };
 
-const getAllProshows = async (req, res) => {
+export const getAllProshows = async (req, res) => {
   try {
     const proShows = await ProShow.find().sort({ date: 1 });
     res.json(proShows);
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
-};
-
-
-export default {
-  uploadProshow,
-  getAllProshows,
 };
