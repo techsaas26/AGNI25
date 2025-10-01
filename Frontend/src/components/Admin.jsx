@@ -10,6 +10,7 @@ const Admin = () => {
         <Link to="/qwerty/agenda">Agenda Upload</Link>
         <Link to="/qwerty/proshow">Proshow Upload</Link>
         <Link to="/qwerty/event">Event Upload</Link>
+        <Link to="/">Home</Link>
       </nav>
 
       <Routes>

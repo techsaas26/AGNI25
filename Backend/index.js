@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import { conn } from "./database/db.js";
 import uploadRoutes from './routes/uploadRoutes.js';
+import fetchRoutes from './routes/fetchRoutes.js';
 
 dotenv.config();
 
@@ -25,6 +26,7 @@ app.use(express.json());
 // });
 
 app.use('/api/upload', uploadRoutes);
+app.use('/api/fetch', fetchRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server listening on ${PORT}`);

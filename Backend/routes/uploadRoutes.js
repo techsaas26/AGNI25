@@ -1,5 +1,4 @@
 import express from "express";
-import { uploadMiddleware } from "../middleware/uploadMiddleware.js";
 import { uploadAgenda } from "../controllers/agenda-controller.js";
 import { uploadEvent } from "../controllers/event-controller.js";
 import { uploadProshow } from "../controllers/proshow-controller.js";

@@ -1,38 +1,45 @@
-import Agenda from '../models/Agenda.js';
+import Agenda from "../models/Agenda.js";
 
 export const uploadAgenda = async (req, res) => {
+  console.log("uploadAgenda endpoint hit :)");
   try {
-    const { description } = req.body;
-    const date = req.body.date || new Date().toISOString().slice(0, 10);
-    const imageUrl = req.file.path;
+    const { day, imgUrl } = req.body;
+    if (!imgUrl) {
+      return res.status(400).json({ error: "Image URL are required" });
+    }
 
-    // Remove existing agenda for the date
-    await Agenda.findOneAndDelete({ date });
+    // Validate day-enum 
+    const allowedDays = [1, 2];
+    if (!allowedDays.includes(day)) {
+      return res.status(400).json({
+        error: `Invalid day. Allowed values are ${allowedDays.join(", ")}.`,
+      });
+    }
 
-    const agenda = new Agenda({ date, imageUrl, description });
-    await agenda.save();
-    res.status(201).json(agenda);
+    try {
+      // Remove existing agenda for the date
+      await Agenda.findOneAndDelete({ day });
+
+      const agenda = Agenda.create({ day, imgUrl });
+      res.status(201).json({
+        success: true,
+        agenda,
+      });
+    } catch (e) {
+      console.log(e);
+      res.status(500).json({ error: "Server Error" });
+    }
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
-}
-
-export const getAgendaByDate = async (req, res) => {
-  try {
-    const date = req.query.date || new Date().toISOString().slice(0, 10);
-    const agenda = await Agenda.findOne({ date });
-    if (!agenda) return res.status(404).json({ message: 'No agenda found' });
-    res.json(agenda);
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  }
-}
+};
 
 export const getAllAgendas = async (req, res) => {
+  console.log("getAllAgendas endpoint hit :)");
   try {
-    const agendas = await Agenda.find().sort({ date: 1 });
+    const agendas = await Agenda.find().sort({ day: 1 });
     res.json(agendas);
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
-}
+};

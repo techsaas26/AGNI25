@@ -1,6 +1,7 @@
 import Proshow from "../models/Proshow.js";
 
 export const uploadProshow = async (req, res) => {
+  console.log("uploadProshow endpoint hit :)");
   try {
     const { name, imgUrl, date } = req.body;
 
@@ -29,8 +30,9 @@ export const uploadProshow = async (req, res) => {
 };
 
 export const getAllProshows = async (req, res) => {
+  console.log("getAllProshows endpoint hit :)");
   try {
-    const proShows = await ProShow.find().sort({ date: 1 });
+    const proShows = await Proshow.find().sort({ date: 1 });
     res.json(proShows);
   } catch (err) {
     res.status(500).json({ error: err.message });
