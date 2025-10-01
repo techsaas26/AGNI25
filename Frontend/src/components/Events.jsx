@@ -30,7 +30,8 @@ const EventCard = ({ event }) => {
         }}
       />
       <h4>{event.title}</h4>
-      {event.desc && <p>{event.desc}</p>}
+      {event.club && <p>Club: {event.club}</p>}
+      {event.description && <p>Description: {event.description}</p>}
       {event.venue && <p>Venue: {event.venue}</p>}
       <p>
         Day: {event.day} | {event.time}-Event
@@ -43,6 +44,7 @@ const EventCard = ({ event }) => {
 const Events = () => {
   const [events, setEvents] = useState([]);
   const [selectedType, setSelectedType] = useState(null);
+  const [selectedDay, setSelectedDay] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -64,9 +66,18 @@ const Events = () => {
   }, []);
 
   if (loading) return <p>Loading events...</p>;
-
-  const filteredEvents = selectedType
+ 
+  // Filter events by type first
+  const filteredByType = selectedType
     ? events.filter((e) => e.type === selectedType)
+    : [];
+
+  // Get available days dynamically for this type
+  const availableDays = [...new Set(filteredByType.map((e) => e.day))];
+
+  // Filter events by day after type
+  const filteredEvents = selectedDay
+    ? filteredByType.filter((e) => e.day === selectedDay)
     : [];
 
   return (
@@ -84,17 +95,39 @@ const Events = () => {
               cursor: "pointer",
               background: selectedType === card.key ? "#eee" : "#fff",
             }}
-            onClick={() => setSelectedType(card.key)}
+            onClick={() => {
+              setSelectedType(card.key);
+              setSelectedDay(null); // reset day when type changes
+            }}
           >
             <h3>{card.label}</h3>
           </div>
         ))}
       </div>
 
-      {/* Event cards */}
-      {filteredEvents.length === 0 && selectedType && (
-        <p>No events available.</p>
+      {/* Day selector (shown only if type is selected) */}
+      {selectedType && availableDays.length > 0 && (
+        <div style={{ display: "flex", gap: "10px", marginBottom: "20px" }}>
+          {availableDays.map((day) => (
+            <button
+              key={day}
+              style={{
+                padding: "5px 10px",
+                background: selectedDay === day ? "#333" : "#fff",
+                color: selectedDay === day ? "#fff" : "#000",
+                border: "1px solid #333",
+                cursor: "pointer",
+              }}
+              onClick={() => setSelectedDay(day)}
+            >
+              Day {day}
+            </button>
+          ))}
+        </div>
       )}
+
+      {/* Event cards */}
+      {selectedDay && filteredEvents.length === 0 && <p>No events available.</p>}
 
       <div style={{ display: "flex", flexWrap: "wrap", gap: "20px" }}>
         {filteredEvents.map((event) => (

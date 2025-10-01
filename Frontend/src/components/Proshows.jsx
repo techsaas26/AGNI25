@@ -7,7 +7,9 @@ const Proshows = () => {
   useEffect(() => {
     const fetchProshows = async () => {
       try {
-        const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/fetch/proshow`);
+        const res = await fetch(
+          `${import.meta.env.VITE_BACKEND_URL}/api/fetch/proshow`
+        );
         const data = await res.json();
         setProshows(data); // expects [{name, imgUrl, date}, ...]
       } catch (err) {
@@ -24,7 +26,13 @@ const Proshows = () => {
   if (proshows.length === 0) return <p>No proshows available.</p>;
 
   return (
-    <div>
+    <div
+      style={{
+        border: "1px solid #ccc",
+        padding: "10px",
+        marginBottom: "20px",
+      }}
+    >
       <h2>All Proshows</h2>
       <div style={{ display: "flex", flexWrap: "wrap", gap: "20px" }}>
         {proshows.map((proshow, idx) => (

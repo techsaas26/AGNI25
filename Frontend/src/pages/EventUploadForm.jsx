@@ -5,6 +5,7 @@ import { uploadToCloudinary } from "../utils/uploadToCloudinary";
 const EventUploadForm = () => {
   const [file, setFile] = useState(null);
   const [title, setTitle] = useState("");
+  const [club, setClub] = useState("");
   const [desc, setDesc] = useState("");
   const [venue, setVenue] = useState("");
   const [type, setType] = useState("Club");
@@ -25,13 +26,14 @@ const EventUploadForm = () => {
 
       const res = await axios.post(
         `${import.meta.env.VITE_BACKEND_URL}/api/upload/event`,
-        { title, imgUrl : secure_url , desc, venue, type, day, time, isPaid }
+        { title, club, imgUrl : secure_url , description: desc, venue, type, day, time, isPaid }
       );
 
       console.log(res.data);
 
       // Reset form
       setTitle("");
+      setClub("");
       setDesc("");
       setVenue("");
       setType("Club");
@@ -60,6 +62,13 @@ const EventUploadForm = () => {
         value={title}
         onChange={(e) => setTitle(e.target.value)}
         required
+      />
+
+      <input
+        type="text"
+        placeholder="Club Name"
+        value={club}
+        onChange={(e) => setClub(e.target.value)}
       />
 
       <input

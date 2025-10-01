@@ -3,15 +3,16 @@ import Event from "../models/Event.js";
 export const uploadEvent = async (req, res) => {
   console.log("uploadEvent endpoint hit :)");
   try {
-    const { title, imgUrl, description, venue, type, day, time, isPaid } = req.body;
+    const { title, imgUrl, club, description, venue, type, day, time, isPaid } = req.body;
 
-    if(!imgUrl || !day || !title) {
+    if(!club || !imgUrl || !day || !title) {
       return res.status(400).json({ error: "Some Fields are required" });
     }
 
     try {
       const event = await Event.create({
         title,
+        club,
         imgUrl,
         description,
         venue,

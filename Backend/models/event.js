@@ -2,6 +2,7 @@ import mongoose from "mongoose";
 
 const eventSchema = new mongoose.Schema({
   title: { type: String, required: true },
+  club : { type: String, required: true },
   imgUrl: { type: String, required: true },
   description: { type: String },
   venue: { type: String },
