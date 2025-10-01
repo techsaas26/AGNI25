@@ -1,9 +1,9 @@
 import axios from "axios";
 
-export async function uploadToCloudinary(file) {
+export async function uploadToCloudinary(file, uploadPreset) {
   const data = new FormData();
   data.append("file", file);
-  data.append("upload_preset", "image_preset");
+  data.append("upload_preset", uploadPreset);
 
   const cloudName = import.meta.env.VITE_CLOUDINARY_CLOUD_NAME;
   const resourceType = "image";

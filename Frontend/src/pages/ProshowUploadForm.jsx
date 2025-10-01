@@ -13,7 +13,7 @@ const ProshowUploadForm = () => {
 
     try {
       // upload to cloudinary
-      const secure_url = await uploadToCloudinary(file);
+      const secure_url = await uploadToCloudinary(file, "proshow_preset");
       console.log("URL: ", secure_url);
       
       // send backend request

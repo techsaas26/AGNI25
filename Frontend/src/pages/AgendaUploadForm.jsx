@@ -4,14 +4,14 @@ import { uploadToCloudinary } from "../utils/uploadToCloudinary";
 
 const AgendaUploadForm = () => {
   const [file, setFile] = useState(null);
-  const [day, setDay] = useState("");
+  const [day, setDay] = useState(1);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
       // upload to cloudinary
-      const secure_url = await uploadToCloudinary(file);
+      const secure_url = await uploadToCloudinary(file, "agenda_preset");
       console.log("URL: ", secure_url);
 
       // send backend request
@@ -43,7 +43,9 @@ const AgendaUploadForm = () => {
         type="number"
         placeholder="Day (1 or 2)"
         value={day}
-        onChange={(e) => setDay(e.target.value)}
+        onChange={(e) => setDay(Number(e.target.value))}
+        min={1}
+        max={2}
         required
       />
       <button type="submit">Upload Agenda</button>

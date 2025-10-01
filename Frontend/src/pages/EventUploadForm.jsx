@@ -9,7 +9,7 @@ const EventUploadForm = () => {
   const [venue, setVenue] = useState("");
   const [type, setType] = useState("Club");
   const [day, setDay] = useState(1);
-  const [time, setTime] = useState("day");
+  const [time, setTime] = useState("Day");
   const [isPaid, setIsPaid] = useState(false);
 
   const handleSubmit = async (e) => {
@@ -17,7 +17,10 @@ const EventUploadForm = () => {
 
     try {
       // Upload image to Cloudinary
-      const secure_url = await uploadToCloudinary(file);
+      let preset = "club_event_preset";
+      if (type === "Iconic") preset = "iconic_event_preset";
+      if (type === "Signature") preset = "signature_event_preset";
+      const secure_url = await uploadToCloudinary(file, preset);
       console.log("URL: ", secure_url);
 
       const res = await axios.post(
@@ -33,7 +36,7 @@ const EventUploadForm = () => {
       setVenue("");
       setType("Club");
       setDay(1);
-      setTime("day");
+      setTime("Day");
       setIsPaid(false);
       setFile(null);
 
@@ -90,8 +93,8 @@ const EventUploadForm = () => {
       />
 
       <select value={time} onChange={(e) => setTime(e.target.value)} required>
-        <option value="day">Day</option>
-        <option value="night">Night</option>
+        <option value="Day">Day</option>
+        <option value="Night">Night</option>
       </select>
 
       <label>
