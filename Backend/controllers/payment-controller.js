@@ -2,12 +2,13 @@ import crypto from "crypto";
 import Registration from "../models/Registration.js";
 import Event from "../models/Event.js";
 import logger from "../utils/logger.js";
+import razorpay from "../utils/pay.js";
 
 // ---------------- Verify Payment ----------------
 export const verifyPayment = async (req, res, next) => {
   try {
     const { order_id, payment_id, signature, eventId } = req.body;
-    const A_ID = req.A_ID; // from userExtractor middleware
+    const A_ID = req.A_ID; // from userExtractor
 
     logger.info(`Verifying payment for user A_ID: ${A_ID}, eventId: ${eventId}`);
 
@@ -16,6 +17,7 @@ export const verifyPayment = async (req, res, next) => {
       return res.status(400).json({ error: "Missing payment details" });
     }
 
+    // ---------------- 1. Verify signature ----------------
     const body = `${order_id}|${payment_id}`;
     const expectedSignature = crypto
       .createHmac("sha256", process.env.RAZORPAY_KEY_SECRET)
@@ -27,27 +29,42 @@ export const verifyPayment = async (req, res, next) => {
       return res.status(400).json({ error: "Invalid payment signature" });
     }
 
-    // Check if event exists
+    // ---------------- 2. Fetch payment details ----------------
+    const payment = await razorpay.payments.fetch(payment_id);
+
+    // ---------------- 3. Check event exists ----------------
     const event = await Event.findById(eventId);
     if (!event) {
       logger.warn(`Event not found: ${eventId}`);
       return res.status(404).json({ error: "Event not found" });
     }
 
-    // Prevent duplicate registration
+    // ---------------- 4. Prevent duplicate registration ----------------
     const existingRegistration = await Registration.findOne({ A_ID, eventID: eventId });
     if (existingRegistration) {
       logger.warn(`User already registered: A_ID ${A_ID}, eventId ${eventId}`);
       return res.status(400).json({ error: "Already registered" });
     }
 
-    // Create registration
+    // ---------------- 5. Verify payment amount ----------------
+    const baseFee = event.price || 200; // base registration fee
+    const gatewayPercent = 0.02;        // 2%
+    const gstPercent = 0.18;            // 18%
+    const expectedTotalCharge = Math.ceil(baseFee / (1 - gatewayPercent * (1 + gstPercent))) * 100; // in paise
+
+    if (payment.amount !== expectedTotalCharge) {
+      logger.warn(`Incorrect payment amount by user ${A_ID}. Paid: ${payment.amount}, Expected: ${expectedTotalCharge}`);
+      return res.status(400).json({ error: "Incorrect payment amount" });
+    }
+
+    // ---------------- 6. Create registration ----------------
     const registration = await Registration.create({
       A_ID,
       eventID: eventId,
       eventname: event.title,
       isPaid: true,
       paymentId: payment_id,
+      amountPaid: payment.amount / 100, // store in INR
     });
 
     logger.info(`Payment verified & registration created: A_ID ${A_ID}, eventId ${eventId}`);
@@ -55,8 +72,9 @@ export const verifyPayment = async (req, res, next) => {
       message: "Payment verified & registered successfully",
       registration,
     });
+
   } catch (err) {
     logger.error(`Error verifying payment: ${err.stack}`);
-    next(err); // pass error to centralized error handler
+    next(err);
   }
 };

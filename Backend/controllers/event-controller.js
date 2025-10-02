@@ -69,6 +69,7 @@ export const registerEvent = async (req, res, next) => {
     const { eventId } = req.body;
     const A_ID = req.A_ID; // from userExtractor
     const user = req.user;
+    logger.info(`Register request by user ${A_ID} for event ${eventId}`);
 
     if (!user) {
       logger.warn("Unauthorized registration attempt");
@@ -99,11 +100,26 @@ export const registerEvent = async (req, res, next) => {
     }
 
     // ---------------- Paid Event ----------------
-    const amount = event.price ? event.price * 100 : 5000; // default ₹50
+    // Base registration fee in INR
+    const baseFee = event.fee || 200; // default ₹200
+
+    // Gateway + GST percentages
+    const gatewayPercent = 0.02; // 2%
+    const gstPercent = 0.18;     // 18%
+
+    // Calculate total amount to charge so you receive exact baseFee
+    const totalCharge = Math.ceil(baseFee / (1 - gatewayPercent * (1 + gstPercent))); 
+
     const options = {
-      amount,
+      amount: totalCharge * 100, // amount in paise
       currency: "INR",
       receipt: `event_${eventId}_${A_ID}_${Date.now()}`,
+      notes: {
+        eventId: event._id.toString(),
+        userId: A_ID,
+        baseFee: baseFee,
+        convenienceFee: totalCharge - baseFee
+      }
     };
 
     const order = await razorpay.orders.create(options);
@@ -114,6 +130,9 @@ export const registerEvent = async (req, res, next) => {
       orderId: order.id,
       amount: order.amount,
       currency: order.currency,
+      totalCharge,
+      baseFee,
+      convenienceFee: totalCharge - baseFee,
       eventId: event._id,
     });
   } catch (err) {

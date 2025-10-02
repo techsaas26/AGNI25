@@ -1,6 +1,6 @@
 import logger from "./logger.js";
 import jwt from "jsonwebtoken";
-import User from "../models/User.js";
+import User from "../models/user.js";
 import multer from "multer";
 import config from "./config.js";
 
@@ -34,7 +34,7 @@ export const userExtractor = async (req, res, next) => {
 
     req.A_ID = decodedToken.A_ID;
     logger.info(`Authenticated user A_ID: ${req.A_ID}`);
-    req.user = await User.findOne({ A_ID: decodedToken.A_ID }).select("-password"); // exclude password
+    req.user = await User.findOne({ A_ID: decodedToken.A_ID }).select("-passwordHash"); // exclude password
     next();
   } catch (err) {
     return res.status(401).json({ error: "token invalid" });

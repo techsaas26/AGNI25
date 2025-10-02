@@ -10,6 +10,8 @@ const eventSchema = new mongoose.Schema({
   day: { type: Number, enum: [1, 2], required: true },
   time: { type: String, enum: ['Day', 'Night'], required: true },
   isPaid: { type: Boolean, default: false },
+  fee: { type: Number, default: 0 },
+  registeredUsers: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }],
   createdAt: { type: Date, default: Date.now }
 });
 
