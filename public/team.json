@@ -1,0 +1,42 @@
+[
+  { "name": "Name A", "role": "President", "image": "one.png" },
+  { "name": "Name B", "role": "President", "image": "two.png" },
+
+  { "name": "Name C", "role": "Vice President", "image": "three.png" },
+  { "name": "Name D", "role": "Vice President", "image": "four.png" },
+
+  { "name": "Name E", "role": "General Secretary", "image": "five.png" },
+  { "name": "Name F", "role": "Joint Secretary", "image": "six.png" },
+  { "name": "Name G", "role": "Sports Secretary", "image": "seven.png" },
+
+  { "name": "Name H", "role": "Corporate Secretary", "image": "eight.png" },
+  { "name": "Name I", "role": "Corporate Secretary", "image": "nine.png" },
+
+  { "name": "Name J", "role": "Finance", "image": "ten.png" },
+  { "name": "Name K", "role": "Finance", "image": "eleven.png" },
+
+  { "name": "Name L", "role": "Events", "image": "twelve.png" },
+  { "name": "Name M", "role": "Events", "image": "thirteen.png" },
+  { "name": "Name N", "role": "Events", "image": "fourteen.png" },
+
+  { "name": "Name O", "role": "Logistics", "image": "fifteen.png" },
+  { "name": "Name P", "role": "Logistics", "image": "sixteen.png" },
+
+  { "name": "Name Q", "role": "Human Resource", "image": "seventeen.png" },
+  { "name": "Name R", "role": "Human Resource", "image": "eighteen.png" },
+  { "name": "Name S", "role": "Human Resource", "image": "nineteen.png" },
+
+  { "name": "Name T", "role": "Marketing", "image": "twenty.png" },
+  { "name": "Name U", "role": "Marketing", "image": "twentyone.png" },
+
+  { "name": "Name V", "role": "Contents", "image": "twentytwo.png" },
+
+  { "name": "Name W", "role": "Technical Design", "image": "twentythree.png" },
+  { "name": "Name X", "role": "Technical Design", "image": "twentyfour.png" },
+
+  { "name": "Name Y", "role": "Graphics Design", "image": "twentyfive.png" },
+  { "name": "Name Z", "role": "Graphics Design", "image": "twentysix.png" },
+  { "name": "Name AA", "role": "Graphics Design", "image": "twentyseven.png" },
+
+  { "name": "Name AB", "role": "Permissions / Documentations", "image": "twentyeight.png" }
+]
