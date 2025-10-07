@@ -2,7 +2,7 @@ import React from 'react';
 
 function Merchandise() {
   return (
-    <div style={{ padding: '2rem' }}>
+    <div className="retro-green" style={{ padding: '2rem', paddingTop: '6rem' }}>
       <section style={{ textAlign: 'center', marginBottom: '2rem' }}>
         <h1
           className="display-font headline-sandal"
@@ -49,7 +49,7 @@ function Merchandise() {
             >
               <img
                 alt="Front of T-shirt"
-                src="https://images.unsplash.com/photo-1554568218-0f1715e72254?q=80&w=900&auto=format&fit=crop"
+                src="/public/front.png"
                 style={{
                   height: 380,
                   width: 'auto',
@@ -85,7 +85,7 @@ function Merchandise() {
             >
               <img
                 alt="Back of T-shirt"
-                src="https://images.unsplash.com/photo-1618354691457-77c2c35f2a13?q=80&w=900&auto=format&fit=crop"
+                src="/public/back.png"
                 style={{
                   height: 380,
                   width: 'auto',
@@ -136,7 +136,7 @@ function Merchandise() {
             <p style={{ fontSize: '0.9rem', marginBottom: '0.5rem' }}>
               WEAR THE T‑SHIRT AND MEET OUR SINGERS ON CONCERT DAY!
             </p>
-            <button style={{ alignSelf: 'start', marginBottom: '0.5rem' }}>Buy Now</button>
+            <button style={{ alignSelf: 'start', marginBottom: '0.5rem' }} onClick={() => window.open('https://forms.gle/iMcqkxu2cX6GywPN9', '_blank')}>Buy Now</button>
             <p style={{ opacity: 0.85, fontSize: '0.85rem' }}>
               Last Date for Registration: <strong>Oct 31st 2025</strong>
             </p>

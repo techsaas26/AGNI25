@@ -14,7 +14,7 @@ function Register() {
   };
 
   return (
-    <div className="fire-rain-bg palette-bg">
+    <div className="retro-green">
       <div className="fire-rain-overlay">
         {Array.from({ length: 25 }).map((_, i) => (
           <div key={i} className="fire-drop" style={{ left: `${Math.random()*100}%`, animationDuration: `${6 + Math.random()*6}s`, animationDelay: `${Math.random()*4}s` }} />

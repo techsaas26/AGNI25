@@ -7,12 +7,21 @@ function Navbar() {
 
   return (
     <>
-      <nav style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0.8rem 1.2rem', background: 'transparent', position: 'absolute', width: '100%', zIndex: 100 }}>
+      <nav style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0.8rem 1.2rem', background: 'rgba(0,0,0,0.35)', position: 'fixed', top: 0, left: 0, width: '100%', zIndex: 2000, backdropFilter: 'blur(6px)' }}>
         <h1 className="display-font" style={{ fontSize: '2rem', letterSpacing: '2px' }}>AGNI25</h1>
-        <div onClick={toggle} className={`hamburger ${open ? 'open' : ''}`} aria-label="Menu" role="button" tabIndex={0}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+          <div className="nav-links-desktop" style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+            <Link to="/">Home</Link>
+            <Link to="/events">Events</Link>
+            <Link to="/merch">Merch</Link>
+            <Link to="/register">Register</Link>
+            <Link to="/login">Login</Link>
+          </div>
+          <div onClick={toggle} className={`hamburger ${open ? 'open' : ''}`} aria-label="Menu" role="button" tabIndex={0}>
           <span></span>
           <span></span>
           <span></span>
+          </div>
         </div>
       </nav>
 

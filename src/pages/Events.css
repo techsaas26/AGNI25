@@ -1,11 +1,11 @@
 .events-container {
   min-height: 100vh;
-  background: 
-    radial-gradient(ellipse at bottom, #1a0000 0%, #000000 70%),
-    linear-gradient(0deg, rgba(139,0,0,0.1) 0%, transparent 100%);
+  background:
+    radial-gradient(1400px 700px at 50% 120%, rgba(0, 70, 30, 0.6), rgba(0, 0, 0, 0) 70%),
+    linear-gradient(180deg, #0b3d2e 0%, #062a20 50%, #021a13 100%);
   position: relative;
   overflow: hidden;
-  padding: 2rem;
+  padding: 6rem 2rem 2rem 2rem;
 }
 
 /* Global maroon glow overlay */
@@ -15,10 +15,10 @@
   inset: 0;
   pointer-events: none;
   z-index: 0; /* under embers and fires, above base background */
-  background: 
-    radial-gradient(1000px 600px at 8% 92%, rgba(128, 0, 32, 0.28), rgba(128, 0, 32, 0.12) 45%, rgba(128, 0, 32, 0.0) 70%),
-    radial-gradient(1000px 600px at 92% 92%, rgba(128, 0, 32, 0.28), rgba(128, 0, 32, 0.12) 45%, rgba(128, 0, 32, 0.0) 70%),
-    linear-gradient(to top, rgba(128, 0, 32, 0.12), rgba(128, 0, 32, 0.0) 40%);
+  background:
+    radial-gradient(1000px 600px at 8% 92%, rgba(0, 60, 30, 0.28), rgba(0, 60, 30, 0.12) 45%, rgba(0, 60, 30, 0.0) 70%),
+    radial-gradient(1000px 600px at 92% 92%, rgba(0, 60, 30, 0.28), rgba(0, 60, 30, 0.12) 45%, rgba(0, 60, 30, 0.0) 70%),
+    linear-gradient(to top, rgba(0, 60, 30, 0.12), rgba(0, 60, 30, 0.0) 40%);
   filter: saturate(1.1) blur(0.2px);
 }
 
@@ -681,6 +681,22 @@
   justify-content: center;
   margin-top: 1.5rem;
 }
+.ticket-button {
+  margin-bottom: 0;
+  padding: 0.65rem 1.4rem;
+  background: linear-gradient(135deg, #ffd166, #ff8c42);
+  color: #111;
+  border: 2px solid #ffb300;
+  border-radius: 9999px;
+  cursor: pointer;
+  font-size: 1.05rem;
+  font-weight: 700;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.02em;
+  transition: transform .08s ease, box-shadow .2s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+.ticket-button:hover { transform: translateY(-1px); box-shadow: 0 6px 16px rgba(0,0,0,0.35); }
 
 .register-button {
   margin-bottom: 0;
