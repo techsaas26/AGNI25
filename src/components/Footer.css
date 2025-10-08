@@ -1,111 +1,149 @@
+/* --- Footer Container (Ensures Centering/Stacking of Sections) --- */
 .footer {
-  background: #0a0a0a;
-  color: #aaa;
-  padding: 2rem 1rem;
-  text-align: center;
-  position: relative;
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0 10px; 
+    font-family: Arial, sans-serif;
+    width: 100%;
+    /* Key for stacking sections and centering them */
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
 }
 
+/* --- 1. Top Row: Copyright & Org Social Links (Centered) --- */
 .footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
+    /* Changed from space-between to center to satisfy centering copyright */
+    justify-content: center; 
+    align-items: center;
+    max-width: 1200px;
+    width: 90%; 
+    margin-bottom: 15px;
+    flex-wrap: wrap; 
+    display: flex; /* Re-added display flex */
 }
 
 .copyright {
-  margin-bottom: 0rem;
-  font-size: 0.9rem;
+    font-size: 2 rem;
+    opacity: 0.8;
 }
 
 .social-links {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
 }
 
 .social-links a {
-  color: #fff;
-  font-size: 1.2rem;
-  transition: color 0.3s ease;
-}
-.social-links a:hover {
-  color: #00d4ff;
+    color: #fff;
+    font-size: 1.5rem;
+    transition: color 0.3s;
 }
 
-.designed-by-wrapper {
-  margin-top: 1.5rem;
-  position: relative;
-  display: inline-block;
+/* --- 2. Bottom Row: Designed By & Popup Container (Hover Fixes) --- */
+.designed-by-container {
+    position: relative; 
+    cursor: pointer;
+    text-align: center;
+    padding: 5px;
+    margin-top: 5px; 
+    /* This padding is crucial! It acts as a safe zone to transition the mouse */
+    padding-top: 5px; 
 }
 
 .designed-by {
-  font-weight: 600;
-  background: linear-gradient(
-    90deg,
-    rgba(40, 184, 190, 1) 54%,
-    rgba(0, 212, 255, 1) 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  cursor: pointer;
+    color: #55aaff; 
+    font-size: 1rem;
+    transition: color 0.3s;
 }
 
+/* --- Designer Popup --- */
 .designer-popup {
-  position: absolute;
-  bottom: 120%;        /* 👈 instead of top */
-  left: 50%;
-  transform: translateX(-50%);
-  background: #111;
-  border: 1px solid #222;
-  border-radius: 10px;
-  padding: 1rem;
-  z-index: 10;
-  white-space: nowrap;
+    position: absolute;
+    /* Move popup down slightly to overlap the safe zone padding */
+    bottom: calc(100% - 10px); 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.9); 
+    padding: 15px;
+    z-index: 100;
+    min-width: 400px;
+    /* Removed margin-bottom because we're using padding-top on the container */
 }
 
 .designer-profiles {
-  display: flex;
-  gap: 1.5rem;
-  align-items: flex-start;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.designer-card-link {
+    text-decoration: none;
+    color: inherit;
 }
 
 .designer-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100px;   /* keep a consistent card width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.designer-card:hover {
+    transform: translateY(-3px);
+    cursor: pointer;
 }
 
 .designer-img {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  object-fit: cover;    /* keeps face centered, no stretching */
-  object-position: center; /* make sure it centers on the face */
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #55aaff;
 }
 
 .designer-name {
-  margin-top: 0.5rem;
-  font-size: 0.85rem;
-  color: #fff;
-  text-align: center;
+    margin-top: 8px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #fff;
+    white-space: nowrap;
 }
 
-.designer-links {
-  margin-top: 0.3rem;
-  display: flex;
-  gap: 0.5rem;
-  justify-content: center;
+/* --- Mobile Responsiveness --- */
+
+/* For smaller tablets/mobile, stack the top row */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .copyright {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
 }
 
-.designer-links a {
-  color: #00d4ff;
-  font-size: 1rem;
-  transition: color 0.3s ease;
-}
-
-.designer-links a:hover {
-  color: #28b8be;
+/* For very small screens (phones), adjust the popup */
+@media (max-width: 500px) {
+    .designer-popup {
+        min-width: 95vw; 
+        padding: 10px 5px;
+    }
+    .designer-profiles {
+        gap: 5px;
+    }
+    .designer-img {
+        width: 55px;
+        height: 55px;
+    }
+    .designer-name {
+        font-size: 0.8rem;
+    }
 }

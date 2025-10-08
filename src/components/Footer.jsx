@@ -40,13 +40,14 @@ const Footer = () => {
 
   return (
     <footer className="footer">
+      {/* 1. Top Row: Copyright & Social Links */}
       <div className="footer-content">
         {/* Copyright */}
         <p className="copyright">
           &copy; 2025 AGNI @ Student Association and Arts Society, CEG
         </p>
 
-        {/* Social Links */}
+        {/* Social Links for the Organization */}
         <ul className="social-links">
           <li>
             <a
@@ -55,7 +56,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i className="fab fa-facebook"></i>
+              <i className="fa-brands fa-facebook"></i>
             </a>
           </li>
           <li>
@@ -65,7 +66,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i className="fab fa-twitter"></i>
+              <i className="fa-brands fa-twitter"></i>
             </a>
           </li>
           <li>
@@ -75,7 +76,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i className="fab fa-linkedin"></i>
+              <i className="fa-brands fa-linkedin"></i>
             </a>
           </li>
           <li>
@@ -85,56 +86,48 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i className="fab fa-instagram"></i>
+              <i className="fa-brands fa-instagram"></i>
             </a>
           </li>
         </ul>
+      </div>
 
-        {/* Designed by */}
-        <div
-          className="designed-by-wrapper"
-          onMouseEnter={() => setShowPopup(true)}
-          onMouseLeave={() => setShowPopup(false)}
-        >
-          <p className="designed-by">
-            Designed by Technical Design, SAAS
-          </p>
+      {/* 2. Bottom Row: Designed By & Popup (Handles hover state) */}
+      <div
+        className="designed-by-container"
+        onMouseEnter={() => setShowPopup(true)}
+        // Added a short delay to the onMouseLeave
+        onMouseLeave={() => setTimeout(() => setShowPopup(false), 200)}
+      >
+        <p className="designed-by">
+          Designed by Technical Design, SAAS
+        </p>
 
-          {showPopup && (
-            <div className="designer-popup">
-              <div className="designer-profiles">
-                {designers.map((designer, index) => (
-                  <div key={index} className="designer-card">
+        {showPopup && (
+          <div className="designer-popup">
+            <div className="designer-profiles">
+              {designers.map((designer, index) => (
+                <a
+                  key={index}
+                  className="designer-card-link"
+                  href={designer.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`LinkedIn profile for ${designer.name}`}
+                >
+                  <div className="designer-card">
                     <img
                       src={designer.img}
                       alt={designer.name}
                       className="designer-img"
                     />
                     <span className="designer-name">{designer.name}</span>
-                    <div className="designer-links">
-                      <a
-                        href={designer.instagram}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="Instagram"
-                      >
-                        <i className="fab fa-instagram"></i>
-                      </a>
-                      <a
-                        href={designer.linkedin}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="LinkedIn"
-                      >
-                        <i className="fab fa-linkedin"></i>
-                      </a>
-                    </div>
                   </div>
-                ))}
-              </div>
+                </a>
+              ))}
             </div>
-          )}
-        </div>
+          </div>
+        )}
       </div>
     </footer>
   );
