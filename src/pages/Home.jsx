@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
+import TeamMemberCard from "../components/TeamMemberCard";
 
 function Home() {
   const aboutRef = useRef(null);
@@ -260,18 +261,18 @@ function Home() {
         <h2 className="display-font headline-sandal" style={{ textAlign: "center", marginBottom: "1rem", fontSize: '2.4rem', letterSpacing: '1px' }}>Our Team</h2>
         <div id="teamScroller" style={{ position: 'relative', maxWidth: '1000px', margin: '0 auto' }}>
           <div className="no-scrollbar" style={{ display: 'flex', overflowX: 'auto', scrollBehavior: 'smooth', gap: '1rem', padding: '0 2.5rem' }}>
-            {teamMembers.map((m, i) => {
-              const imgSrc = m?.image ? (m.image.startsWith('/') ? m.image : `/${m.image}`) : `https://source.unsplash.com/featured/300x300/?student,face&sig=${i}`;
-              return (
-                <div key={i} className="card" style={{ width: 200, flex: '0 0 auto', textAlign: 'center' }}>
-                  <div style={{ width: 160, height: 160, margin: '0.5rem auto', borderRadius: 14, overflow: 'hidden', background: 'rgba(255,255,255,0.06)' }}>
-                    <img alt={m.name} src={imgSrc} style={{ width: '100%', height: '100%', objectFit: 'cover' }} onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = '/agni-logo.png'; }} />
-                  </div>
-                  <div style={{ fontSize: 13, opacity: .9 }}>{m.role}</div>
-                  <div style={{ fontWeight: 600 }}>{m.name}</div>
-                </div>
-              );
-            })}
+            {teamMembers.map((m, i) => (
+              <div key={i} style={{ flex: '0 0 auto' }}>
+                <TeamMemberCard
+                  name={m.name}
+                  role={m.role}
+                  image={m.image}
+                  instagram={m.instagram}
+                  linkedin={m.linkedin}
+                  onClick={() => {}}
+                />
+              </div>
+            ))}
           </div>
           <button onClick={() => { const sc = document.querySelector('#teamScroller .no-scrollbar'); sc && sc.scrollBy({ left: -260, behavior: 'smooth' }); }}
                   style={{ position: 'absolute', left: 10, top: '50%', transform: 'translateY(-50%)', width: 44, height: 44, borderRadius: '50%', border: 'none', background: 'rgba(255,255,255,0.2)', cursor: 'pointer', fontSize: '24px', color: 'white' }}>

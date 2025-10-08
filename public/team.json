@@ -1,42 +1,42 @@
 [
-  { "name": "Name A", "role": "President", "image": "one.png" },
-  { "name": "Name B", "role": "President", "image": "two.png" },
+  { "name": "Jothiruban M", "role": "President", "image": "Jothiruban.JPG", "instagram": "https://www.instagram.com/jothiruban_m/", "linkedin": "https://www.linkedin.com/in/jothiruban/" },
+  { "name": "Priyadharshini P", "role": "President", "image": "Priyadharshini P.JPG", "instagram": "https://www.instagram.com/priyadharshini_ponnulingam?igsh=MXR1NXlhenV2OHkzOA==", "linkedin": "https://www.linkedin.com/in/priyadharshini-p01" },
 
-  { "name": "Name C", "role": "Vice President", "image": "three.png" },
-  { "name": "Name D", "role": "Vice President", "image": "four.png" },
+  { "name": "Pugazhendhi K", "role": "Vice President", "image": "PUGAZH.jpg", "instagram": "https://www.instagram.com/_._pugazh._08?igsh=MTFtdzhkaDA1engzaQ==", "linkedin": "https://www.linkedin.com/company/saasceg/" },
+  { "name": "Krishnashree D", "role": "Vice President", "image": "Krishnashree D.JPG", "instagram": "https://www.instagram.com/krishna_shree_26?igsh=am55Z2hmOHE0dm5x", "linkedin": "http://www.linkedin.com/in/krishnashree-d" },
 
-  { "name": "Name E", "role": "General Secretary", "image": "five.png" },
-  { "name": "Name F", "role": "Joint Secretary", "image": "six.png" },
-  { "name": "Name G", "role": "Sports Secretary", "image": "seven.png" },
+  { "name": "S P Ecialise", "role": "General Secretary", "image": "download5.png", "instagram": "https://www.instagram.com/saas_ceg/", "linkedin": "https://www.linkedin.com/in/s-p-ecialise-499721381/" },
+  { "name": "Bhavna S", "role": "Joint Secretary", "image": "Bhavna.jpg", "instagram": "https://www.instagram.com/_bhavna30_?igsh=ZWtqdW41dmFseDIx", "linkedin": "https://www.linkedin.com/company/saasceg/" },
+  { "name": "Jaagap Martin A", "role": "Sports Secretary", "image": "Jaagap Martin .jpg", "instagram": "https://www.instagram.com/j_a_a_g_a_p_cr_7?igsh=MWVva243d3pvODliNw==", "linkedin": "https://www.linkedin.com/in/jaagapmartin7" },
 
-  { "name": "Name H", "role": "Corporate Secretary", "image": "eight.png" },
-  { "name": "Name I", "role": "Corporate Secretary", "image": "nine.png" },
+  { "name": "Mowniya T", "role": "Corporate Relation", "image": "MOWNIYA T.JPG", "instagram": "https://www.instagram.com/mowniya_thangaraj?igsh=MTZ3Y3VyZjk0Y2k5ZA==", "linkedin": "https://www.linkedin.com/in/mowniya-thangaraj" },
+  { "name": "Sanjay B", "role": "Corporate Relation", "image": "Sanjay.png", "instagram": "https://www.instagram.com/saas_ceg/", "linkedin": "https://www.linkedin.com/company/saasceg/" },
 
-  { "name": "Name J", "role": "Finance", "image": "ten.png" },
-  { "name": "Name K", "role": "Finance", "image": "eleven.png" },
+  { "name": "Janardhan S", "role": "Finance", "image": "Janardhan.JPG", "instagram": "https://www.instagram.com/itz__jana__?igsh=MWtvcG1qeHR3azFwaQ==", "linkedin": "https://www.linkedin.com/in/janardhan-subramanian/" },
+  { "name": "S Vishwa Priya", "role": "Finance", "image": "S Vishwa Priya.JPG", "instagram": "https://www.instagram.com/saas_ceg/", "linkedin": "https://www.linkedin.com/company/saasceg/" },
 
-  { "name": "Name L", "role": "Events", "image": "twelve.png" },
-  { "name": "Name M", "role": "Events", "image": "thirteen.png" },
-  { "name": "Name N", "role": "Events", "image": "fourteen.png" },
+  { "name": "Ashmi Sri Lakshmi R", "role": "Events, Workshops & Carnivals", "image": "Ashmi.jpg", "instagram": "https://www.instagram.com/saas_ceg/", "linkedin": "https://www.linkedin.com/company/saasceg/" },
+  { "name": "Kalyanasaravanan A A", "role": "Events, Workshops & Carnivals", "image": "Kalyanasaravanan A A.jpg", "instagram": "https://www.instagram.com/kalyan_aaks?igsh=MWd6bW14a2I3dThxdA==", "linkedin": "https://www.linkedin.com/in/kalyanasaravanan-a-a-3707b5298?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
+  { "name": "Nikaash T K", "role": "Events, Workshops & Carnivals", "image": "NIKAASH.jpg", "instagram": "https://www.instagram.com/nikaash_arulkon_31/?hl=en", "linkedin": "https://www.linkedin.com/in/nikaash-tk/" },
 
-  { "name": "Name O", "role": "Logistics", "image": "fifteen.png" },
-  { "name": "Name P", "role": "Logistics", "image": "sixteen.png" },
+  { "name": "Bharathi Raja S", "role": "Logistics", "image": "Bharathi.JPG", "instagram": "https://www.instagram.com/_mr_unique_.03?igsh=MWxxaGF2dDRtcDV3eg==", "linkedin": "https://www.linkedin.com/in/bharathi-raja-98994827a/" },
+  { "name": "Dharun Sundar M S", "role": "Logistics", "image": "Dharun.jpg", "instagram": "https://www.instagram.com/kishorex18/", "linkedin": "https://www.linkedin.com/in/dharun-sundar" },
 
-  { "name": "Name Q", "role": "Human Resource", "image": "seventeen.png" },
-  { "name": "Name R", "role": "Human Resource", "image": "eighteen.png" },
-  { "name": "Name S", "role": "Human Resource", "image": "nineteen.png" },
+  { "name": "Dharshini P", "role": "HR & Hospitality", "image": "Dharshini.JPG", "instagram": "https://www.instagram.com/dharshini_min.jr?igsh=MWVjYmh3a2g0dGt4dA==", "linkedin": "https://drive.google.com/drive/folders/1oyPDCUPGK1LqUrrSaonHxLSwxD3KTNNm?usp=sharing" },
+  { "name": "S Kathir", "role": "HR & Hospitality", "image": "Kathir.JPG", "instagram": "https://www.instagram.com/kathir_skat?igsh=ZHZkaXBkeTIxNnlx", "linkedin": "https://www.linkedin.com/in/kathir09/" },
+  { "name": "Thilagaraj S", "role": "HR & Hospitality", "image": "Thilak.jpg", "instagram": "https://www.instagram.com/saas_ceg/", "linkedin": "https://www.linkedin.com/company/saasceg/" },
 
-  { "name": "Name T", "role": "Marketing", "image": "twenty.png" },
-  { "name": "Name U", "role": "Marketing", "image": "twentyone.png" },
+  { "name": "Navaneethan M", "role": "Marketing", "image": "Navaneethan.jpg", "instagram": "https://www.instagram.com/nava___718?igsh=MWlwZm16cWRnZndoNw==", "linkedin": "https://www.linkedin.com/company/saasceg/" },
+  { "name": "Roshan Raj R", "role": "Marketing", "image": "ROSHAN.JPG", "instagram": "https://www.instagram.com/aar_cube?igsh=MTlqdm92bmdrOXk2cQ%3D%3D&utm_source=qr", "linkedin": "https://www.linkedin.com/company/saasceg/" },
 
-  { "name": "Name V", "role": "Contents", "image": "twentytwo.png" },
+  { "name": "Mohitha A", "role": "Contents", "image": "Mohitha A.jpg", "instagram": "https://www.instagram.com/_mohitha_1?igsh=OXJyZGp5MGZuYnpr", "linkedin": "https://www.linkedin.com/in/mohitha-arul-vadivu-0a21a625b" },
 
-  { "name": "Name W", "role": "Technical Design", "image": "twentythree.png" },
-  { "name": "Name X", "role": "Technical Design", "image": "twentyfour.png" },
+  { "name": "Krishnendu M R", "role": "Technical Design", "image": "Krishnendu.JPG", "instagram": "https://www.instagram.com/krishnendu.m.r?igsh=MXQwOTdsOGtjN3BnZA==", "linkedin": "https://www.linkedin.com/in/krishnendumr" },
+  { "name": "Krisna VJ", "role": "Technical Design", "image": "Krisna.jpeg", "instagram": "https://www.instagram.com/saas_ceg/", "linkedin": "https://www.linkedin.com/in/krisna-vj/" },
 
-  { "name": "Name Y", "role": "Graphics Design", "image": "twentyfive.png" },
-  { "name": "Name Z", "role": "Graphics Design", "image": "twentysix.png" },
-  { "name": "Name AA", "role": "Graphics Design", "image": "twentyseven.png" },
+  { "name": "Bharanitharan T", "role": "Graphical Design", "image": "bharani.JPG", "instagram": "https://www.instagram.com/tbharani_12?igsh=MWVmeTM3ZDAxeG14NQ==", "linkedin": "https://www.linkedin.com/company/saasceg/" },
+  { "name": "Preethi P", "role": "Graphical Design", "image": "preethi.JPG", "instagram": "https://www.instagram.com/saas_ceg/", "linkedin": "https://www.linkedin.com/company/saasceg/" },
+  { "name": "Subash L", "role": "Graphical Design", "image": "Subash.JPG", "instagram": "https://www.instagram.com/thesubashl/", "linkedin": "https://www.linkedin.com/in/subash-lakshmanan/" },
 
-  { "name": "Name AB", "role": "Permissions / Documentations", "image": "twentyeight.png" }
+  { "name": "Hariharan P", "role": "Permissions & Documentation", "image": "Hariharan.JPG", "instagram": "https://www.instagram.com/hari_rog/?__pwa=1", "linkedin": "https://www.linkedin.com/in/hari-haran-p-36ab092b1" }
 ]

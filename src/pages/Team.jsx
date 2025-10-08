@@ -73,7 +73,9 @@ function Team() {
           const members = await Promise.all(raw.map(async (m) => ({
             name: m.name,
             role: m.role,
-            image: await resolveImagePath(m.image)
+            image: await resolveImagePath(m.image),
+            instagram: m.instagram || '',
+            linkedin: m.linkedin || ''
           })));
           cursor += spec.count;
           groups.push({ title: spec.title, members });

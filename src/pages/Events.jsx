@@ -22,7 +22,7 @@ function Events() {
           venue: 'Campus Arena',
           description: 'Jump, hop, and balance your way through numbered boxes with a marker to guide your moves. Agility, accuracy and tons of fun!',
           pricing: 'Free',
-          image: '/clubs.jpg',
+          image: '/Hop hustle.jpg',
           startTime: 'TBA',
           endTime: 'TBA'
         },
@@ -31,7 +31,7 @@ function Events() {
           venue: 'Campus Arena',
           description: 'Crack quirky product quizzes, win items in a bidding war, invent something wild and pitch it with a hilarious skit.',
           pricing: 'Free',
-          image: '/clubs.jpg',
+          image: '/ACM-CEG_BID&BUILD.jpeg',
           startTime: 'TBA',
           endTime: 'TBA'
         },
@@ -40,7 +40,7 @@ function Events() {
           venue: 'Campus Arena',
           description: 'A secret song is turned into a dramatic, funny or confusing speech—teams race against time to guess it right!',
           pricing: 'Free',
-          image: '/clubs.jpg',
+          image: '/Speechify the song.png',
           startTime: 'TBA',
           endTime: 'TBA'
         },
@@ -58,7 +58,7 @@ function Events() {
           venue: 'Campus Arena',
           description: 'Toss sponge balls at moving targets on screen. Accuracy, reflexes and strategy decide your score!',
           pricing: 'Free',
-          image: '/clubs.jpg',
+          image: '/Instagram post - 1.png',
           startTime: 'TBA',
           endTime: 'TBA'
         },
@@ -67,16 +67,16 @@ function Events() {
           venue: 'Campus Arena',
           description: 'Pick your corner—Logical, Emotional, Funny, or Calm—after hearing a quirky situation, then justify your choice!',
           pricing: 'Free',
-          image: '/clubs.jpg',
+          image: '/EQ Compass poster.jpeg',
           startTime: 'TBA',
           endTime: 'TBA'
         },
         {
-          title: 'Club - LitClub • 2 Sides of a Coin',
-          venue: 'Campus Arena',
+          title: 'Club - LitClub • Two Sides of a Coin',
+          venue: 'Red Building Room: 73',
           description: 'Two participants play wild characters, swap, downplay each other, then face a universe-switching showdown.',
           pricing: 'Free',
-          image: '/clubs.jpg',
+          image: '/TWO SIDES OF A COIN - LitClub.png',
           startTime: 'TBA',
           endTime: 'TBA'
         },
@@ -100,58 +100,96 @@ function Events() {
         },
         {
           title: 'Club - QA • Arena Quiz',
-          venue: 'Campus Arena',
+          venue: 'Red Building Room: 75',
           description: 'Sports trivia face-off with audio‑visual twists—from cricket and football to RPGs and F1 circuits.',
           pricing: 'Free',
-          image: '/clubs.jpg',
-          startTime: 'TBA',
-          endTime: 'TBA'
+          image: '/Arena Quiz - Quizzers Anonymous.png',
+          startTime: '10.30 A.M',
+          endTime: '4.30 P.M'
         },
         {
           title: 'Club - Robotics • Escape Room',
-          venue: 'Campus Arena',
+          venue: 'Red Building Room: 82',
           description: 'Crack codes, solve circuits and decode riddles in a robotics-inspired escape challenge. Brains over bots!',
           pricing: 'Free',
-          image: '/clubs.jpg',
-          startTime: 'TBA',
-          endTime: 'TBA'
+          image: '/r.jpg',
+          startTime: '10.30 A.M',
+          endTime: '4.30 P.M'
         },
         {
           title: 'Club - SQC • Quality Quest: Roll & Rise',
           venue: 'Campus Arena',
           description: 'Roll the dice, tell truths (and sneaky lies) and climb to victory in a Snakes & Ladders-inspired quest.',
           pricing: 'Free',
-          image: '/clubs.jpg',
-          startTime: 'TBA',
-          endTime: 'TBA'
+          image: '/s.png',
+          startTime: '2.30 P.M',
+          endTime: '4.30'
         },
         {
           title: 'Club - GT • Pass the Puzzle',
           venue: 'Campus Arena',
           description: 'Race through a relay of brain‑teasing puzzles—solve your piece and pass it on to sprint to victory.',
           pricing: 'Free',
-          image: '/clubs.jpg',
+          image: '/PTP GT.png',
           startTime: 'TBA',
           endTime: 'TBA'
         },
         {
           title: 'Club - Theatron • Channel Surfing',
-          venue: 'Campus Arena',
+          venue: 'Red Building Room: 76',
           description: 'Put creativity to the test—crack product quizzes, grab items in a bid and sell it with a skit!',
           pricing: 'Free',
-          image: '/clubs.jpg',
+          image: '/channel surfing_theatron.png',
           startTime: 'TBA',
           endTime: 'TBA'
         },
         {
           title: 'Club - Scribbles • Cover Story',
-          venue: 'Campus Arena',
+          venue: 'Drawing Hall 10',
           description: 'A fun editorial challenge—craft the most compelling cover story under pressure.',
           pricing: 'Free',
-          image: '/clubs.jpg',
+          image: '/cover_story-scribbles.png',
+          startTime: '10.30 A.M',
+          endTime: '4.30 P.M'
+        },
+        {
+          title: 'Club - Saptham • Nadha Vaibhavam',
+          venue: 'Ada Lovelace Audi',
+          description: 'The music and instrumentals solo competition',
+          pricing: 'Free',
+          image: '/Agni Posters.zip - 3.png',
           startTime: 'TBA',
           endTime: 'TBA'
-        }
+        },
+        {
+          title: 'Club - Saptham • Natya Vaibhavam',
+          venue: 'Ada Lovelace Audi',
+          description: 'Step into the world of rhythm, expression and tradition! The bharatnatyam solo competition',
+          pricing: 'Free',
+          image: '/Agni Posters.zip - 1.png',
+          startTime: 'TBA',
+          endTime: 'TBA'
+        },
+        {
+          title: 'Club - Sruthilaya • Solo Instrumentation',
+          venue: 'Vivek Audi',
+          description: 'Solo Instrumentation Competition',
+          pricing: 'Free',
+          image: '/Solo instru -1.png',
+          startTime: '3.00 P.M',
+          endTime: '4.30 P.M'
+        },
+        {
+          title: 'Club - Sruthilaya • Solo Singing',
+          venue: 'Ada Lovelace Audi',
+          description: 'Solo Singing Competition',
+          pricing: 'Free',
+          image: '/Solo singing -1.png',
+          startTime: '1.00 P.M',
+          endTime: '4.30 P.M'
+        },
+        
+
       ],
       'Day 2': [
         { 
@@ -163,14 +201,35 @@ function Events() {
           startTime: 'TBA',
           endTime: 'TBA'
         },
-        {
-          title: 'Club - AU Podium • Roast vs Defend',
-          venue: 'Campus Arena',
-          description: 'One participant hilariously roasts a topic while another defends it—wit, comebacks and laughs guaranteed.',
+        { 
+          title: 'Club - Intra Variety • Echoes of The Past',
+          venue: 'Vivek Audi',
+          description: 'Dig the past and have fun!',
           pricing: 'Free',
-          image: '/clubs.jpg',
+          image: '/i1.png',
           startTime: 'TBA',
           endTime: 'TBA'
+        },
+        {
+          title: 'Adaptunes',
+          venue: 'Vivek Auditorium',
+          description: 'Test your spontaneity as you groove to surprise tracks. Creativity and speed win the day!',
+          pricing: 'Free',
+          image: '/Adaptunes.jpeg',
+          startTime: 'TBA',
+          endTime: 'TBA',
+          club: 'Twisters',
+          purchaseLink: 'https://forms.gle/N3ruyJXsj77XpQhR7',
+          pricingDetails: 'On-the-spot registrations available'
+        },
+        {
+          title: 'Club - AU Podium • Roast vs Defend',
+          venue: 'Red Building Room: 83',
+          description: 'One participant hilariously roasts a topic while another defends it—wit, comebacks and laughs guaranteed.',
+          pricing: 'Free',
+          image: '/ro.png',
+          startTime: '10.30 A.M',
+          endTime: '12.15 P.M'
         },
         {
           title: 'Club - AUSEC • Money Feud',
@@ -186,7 +245,7 @@ function Events() {
           venue: 'Campus Arena',
           description: 'Werewolf-style deception—villagers vs wolves. Bluff, deduce and survive through night and day rounds.',
           pricing: 'Free',
-          image: '/clubs.jpg',
+          image: '/Veil of dobt event.jpeg',
           startTime: 'TBA',
           endTime: 'TBA'
         },
@@ -195,27 +254,60 @@ function Events() {
           venue: 'Campus Arena',
           description: 'Eco‑friendly clay modelling—craft sustainable, themed masterpieces that celebrate imagination.',
           pricing: 'Free',
-          image: '/clubs.jpg',
+          image: '/GB- EcoSculpt.jpg',
           startTime: 'TBA',
           endTime: 'TBA'
         },
         {
           title: 'Club - Leo • Hangin For Clues',
-          venue: 'Campus Arena',
+          venue: 'Red Building Room: 84',
           description: 'Crack clues and shout answers to save your team from the hangman—heroes, heroines, movies and songs!',
           pricing: 'Free',
-          image: '/clubs.jpg',
-          startTime: 'TBA',
-          endTime: 'TBA'
+          image: '/Hangin_For_Clues.png',
+          startTime: '1.30 P.M',
+          endTime: '4.30 P.M'
+        },
+        {
+          title: 'Club - Quizzers Anonymous • Kollywood Quiz',
+          venue: 'Red Building Room: 75',
+          description: 'A quiz on your favourite Tamil Movise and songs!',
+          pricing: 'Free',
+          image: '/k.png',
+          startTime: '10.30 A.M',
+          endTime: '1.30 P.M'
         },
         {
           title: 'Club - LitClub • Assassin',
           venue: 'Campus Arena',
           description: 'Villagers, Detectives and a Serial Killer—bluff, deduce and solve the murder mystery before it is too late.',
           pricing: 'Free',
-          image: '/clubs.jpg',
+          image: '/assa.png',
           startTime: 'TBA',
           endTime: 'TBA'
+        },
+        {
+          title: 'Solo Dance',
+          venue: 'Vivek Auditorium',
+          description: 'Own the spotlight with your unique moves. Bring your passion and ignite the stage!',
+          pricing: 'Free',
+          image: '/soloDance.jpeg',
+          startTime: 'TBA',
+          endTime: 'TBA',
+          club: 'Twisters',
+          purchaseLink: 'https://forms.gle/ejovES9kG1H3YQsc7',
+          pricingDetails: 'On-the-spot registrations available'
+        },
+        {
+          title: 'Duo Dance',
+          venue: 'Vivek Auditorium',
+          description: 'Showcase your coordination and chemistry as a dynamic duo.',
+          pricing: 'Free',
+          image: '/DuoDance.jpeg',
+          startTime: 'TBA',
+          endTime: 'TBA',
+          club: 'Twisters',
+          purchaseLink: 'https://forms.gle/CEz3bakbDZbdSuMm6',
+          pricingDetails: 'On-the-spot registrations available'
         },
         {
           title: 'Club - Pixels • The Reverse Click',
@@ -240,45 +332,46 @@ function Events() {
           venue: 'Campus Arena',
           description: 'Electrifying dance-off—memory dance challenge across styles from Western to Bharatanatyam to Kathak.',
           pricing: 'Free',
-          image: '/clubs.jpg',
+          image: '/Agni Posters.png.png',
           startTime: 'TBA',
           endTime: 'TBA'
         },
         {
           title: 'Club - Sruthilaya • The Singing Telephone',
-          venue: 'Campus Arena',
+          venue: 'Red Building Room: 82',
           description: 'Chinese Whispers with tunes—freshers hum a melody down the chain; can the last player guess it right?',
           pricing: 'Free',
-          image: '/clubs.jpg',
-          startTime: 'TBA',
-          endTime: 'TBA'
+          image: '/SRUTHILAYA - SINGING TELEPHONE.png',
+          startTime: '10.30 A.M',
+          endTime: '4.30 P.M'
         },
         {
           title: 'Club - SQC • Quality Charades',
-          venue: 'Campus Arena',
+          venue: 'Red Building Room: 84',
           description: 'Hot-seat problem solving with Kaizen, Six Sigma, PDCA and RCA—turn defects and complaints into wins.',
           pricing: 'Free',
-          image: '/clubs.jpg',
-          startTime: 'TBA',
-          endTime: 'TBA'
+          image: '/QUALITY CHARADES_SQC.png',
+          startTime: '10.30 A.M',
+          endTime: '12.15 P.M'
         },
         {
           title: 'Club - GT • Mission: Among Us',
           venue: 'Campus Arena',
           description: 'Two-round thriller—trivia and puzzles, then live gameplay with Crewmates, Impostors and sabotage.',
           pricing: 'Free',
-          image: '/clubs.jpg',
+          image: '/MAU GT 3.png',
           startTime: 'TBA',
           endTime: 'TBA'
         },
         {
           title: 'Club - Theatron • Reverse Theatre',
-          venue: 'Campus Arena',
+          venue: 'Red Building Room: 76',
           description: 'Teams act their story backwards—from the ending to the beginning—for laughs and creative chaos.',
           pricing: 'Free',
-          image: '/clubs.jpg',
-          startTime: 'TBA',
-          endTime: 'TBA'
+          image: '/reverse theatre_theatron.png',
+          startTime: '10.30 A.M',
+          endTime: '4.30 P.M'
+          
         },
         {
           title: 'Club - FINS AU • Predict and Profit',
@@ -289,6 +382,7 @@ function Events() {
           startTime: 'TBA',
           endTime: 'TBA'
         }
+
       ],
       'Day 3': [
         { 
@@ -355,7 +449,7 @@ function Events() {
         }
       ]
     },
-    'Signature': {
+    /*'Signature': {
       'Day 1': [
         { 
           title: 'Hackathon', 
@@ -407,7 +501,7 @@ function Events() {
           endTime: '1:00 PM'
         }
       ]
-    },
+    },*/
     'Proshows': {
       'Day 1': [
         {
@@ -416,8 +510,8 @@ function Events() {
           description: 'A relaxed big‑screen experience to kick off the celebrations.',
           pricing: 'Free',
           image: '/moviescreening.png',
-          startTime: 'TBA',
-          endTime: 'TBA'
+          startTime: '7.00 P.M',
+          endTime: '10.00 P.M'
         }
       ],
       'Day 2': [
@@ -427,8 +521,8 @@ function Events() {
           description: "A concert ticket isn't just an entry pass, it's your gateway to an unforgettable night of music, celebration and togetherness.😉 Let the beats move you, the lights inspire you and the fest ignite memories that last a lifetime.🔥",
           pricing: 'Paid',
           image: '/concertnight.png',
-          startTime: 'TBA',
-          endTime: 'TBA',
+          startTime: '7.00 P.M',
+          endTime: '9.45 P.M',
           club: 'SAAS',
           purchaseLink: 'https://forms.gle/gYMsPeeKugQmuK1u7',
           pricingDetails: 'Gold – ₹200, Silver – ₹100'
@@ -441,68 +535,55 @@ function Events() {
           description: 'Showcase of incredible campus talent across arts, music and performance.',
           pricing: 'Free',
           image: '/talent.png',
-          startTime: 'TBA',
-          endTime: 'TBA'
+          startTime: '8.00 P.M',
+          endTime: '9.45 P.M'
         }
       ]
     },
-    'Carnivals': {
+    'Vivek Audi Events': {
       'Day 1': [
         {
-          title: 'Carnival Parade',
-          venue: 'Main Ground',
-          description: 'Colorful parade with music, costumes, and games for everyone.',
+          title: 'Solo Dance',
+          venue: 'Vivek Auditorium',
+          description: 'Own the spotlight with your unique moves. Bring your passion and ignite the stage!',
           pricing: 'Free',
-          image: '/carnivals.png',
-          startTime: '11:00 AM',
-          endTime: '12:30 PM'
+          image: '/soloDance.jpeg',
+          startTime: 'TBA',
+          endTime: 'TBA',
+          club: 'Twisters',
+          purchaseLink: 'https://forms.gle/ejovES9kG1H3YQsc7',
+          pricingDetails: 'On-the-spot registrations available'
         },
         {
-          title: 'Carnival Stalls',
-          venue: 'Central Plaza',
-          description: 'Food, fun, and mini-games across multiple lively stalls.',
+          title: 'Duo Dance',
+          venue: 'Vivek Auditorium',
+          description: 'Showcase your coordination and chemistry as a dynamic duo.',
           pricing: 'Free',
-          image: '/carnivals.png',
-          startTime: '3:00 PM',
-          endTime: '5:00 PM'
-        }
-      ],
-      'Day 2': [
-        {
-          title: 'Mask Making',
-          venue: 'Art Corner',
-          description: 'Bring your creativity to life with a quick mask making session.',
-          pricing: 'Free',
-          image: '/carnivals.png',
-          startTime: '10:30 AM',
-          endTime: '12:00 PM'
+          image: '/DuoDance.jpeg',
+          startTime: 'TBA',
+          endTime: 'TBA',
+          club: 'Twisters',
+          purchaseLink: 'https://forms.gle/CEz3bakbDZbdSuMm6',
+          pricingDetails: 'On-the-spot registrations available'
         },
         {
-          title: 'Street Performers',
-          venue: 'Walkway Stage',
-          description: 'Juggling, mime, and impromptu skits to keep the crowd cheering.',
+          title: 'Adaptunes',
+          venue: 'Vivek Auditorium',
+          description: 'Test your spontaneity as you groove to surprise tracks. Creativity and speed win the day!',
           pricing: 'Free',
-          image: '/carnivals.png',
-          startTime: '4:00 PM',
-          endTime: '6:00 PM'
-        }
-      ],
-      'Day 3': [
-        {
-          title: 'Carnival Closing Gala',
-          venue: 'Open Arena',
-          description: 'Grand wrap-up with music, lights, and a festive vibe.',
-          pricing: 'Free',
-          image: '/carnivals.png',
-          startTime: '7:00 PM',
-          endTime: '9:00 PM'
-        }
+          image: '/Adaptunes.jpeg',
+          startTime: 'TBA',
+          endTime: 'TBA',
+          club: 'Twisters',
+          purchaseLink: 'https://forms.gle/N3ruyJXsj77XpQhR7',
+          pricingDetails: 'On-the-spot registrations available'
+        },
       ]
     }
   };
 
   const categories = CATEGORY_IMAGES.map((src, i) => ({ 
-    name: ['Signature', 'Iconic', 'Clubs', 'Proshows', 'Carnivals'][i], 
+    name: [/*'Signature', 'Iconic'*/, 'Clubs', 'Proshows', /*'Vivek Audi Events'*/][i], 
     image: src 
   }));
 
@@ -559,7 +640,8 @@ function Events() {
       let clubIndex = 0;
       Object.entries(eventData[selectedCategory]).forEach(([dayName, dayEvents]) => {
         dayEvents.forEach(ev => {
-          const club = CLUBS[clubIndex % CLUBS.length];
+          const fallbackClub = CLUBS[clubIndex % CLUBS.length];
+          const club = ev.club || fallbackClub;
           allEvents.push({ ...ev, eventDay: dayName, club });
           clubIndex += 1;
         });
@@ -567,7 +649,10 @@ function Events() {
       return allEvents;
     } else {
       const events = eventData[selectedCategory]?.[selectedDay] || [];
-      return events.map((ev, i) => ({ ...ev, eventDay: selectedDay, club: CLUBS[i % CLUBS.length] }));
+      return events.map((ev, i) => {
+        const fallbackClub = CLUBS[i % CLUBS.length];
+        return { ...ev, eventDay: selectedDay, club: ev.club || fallbackClub };
+      });
     }
   };
 
@@ -741,7 +826,7 @@ function Events() {
                     className="ticket-button"
                     onClick={() => window.open(currentEvent.purchaseLink, '_blank')}
                   >
-                    Buy Concert Ticket ({currentEvent.pricingDetails || 'Pricing inside'})
+                    Get Your Tickets ({currentEvent.pricingDetails || 'Pricing inside'})
                   </button>
                 )}
                 {selectedCategory === 'Signature' && (
