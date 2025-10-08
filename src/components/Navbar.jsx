@@ -176,8 +176,8 @@ const navLinks = [
   { path: '/events', text: 'Events' },
   { path: '/merch', text: 'Merch' },
   { path: '/schedule', text: 'Schedule' },
-  { path: '/#team', text: 'Team', isAnchor: true },
-  { path: '/#contact', text: 'Contact Us', isAnchor: true },
+  // { path: '/#team', text: 'Team', isAnchor: true },
+  // { path: '/#contact', text: 'Contact Us', isAnchor: true },
 ];
 
 function Navbar() {
