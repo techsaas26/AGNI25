@@ -1,0 +1,111 @@
+.footer {
+  background: #0a0a0a;
+  color: #aaa;
+  padding: 2rem 1rem;
+  text-align: center;
+  position: relative;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.copyright {
+  margin-bottom: 0rem;
+  font-size: 0.9rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.social-links a {
+  color: #fff;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+.social-links a:hover {
+  color: #00d4ff;
+}
+
+.designed-by-wrapper {
+  margin-top: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.designed-by {
+  font-weight: 600;
+  background: linear-gradient(
+    90deg,
+    rgba(40, 184, 190, 1) 54%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+}
+
+.designer-popup {
+  position: absolute;
+  bottom: 120%;        /* 👈 instead of top */
+  left: 50%;
+  transform: translateX(-50%);
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 10px;
+  padding: 1rem;
+  z-index: 10;
+  white-space: nowrap;
+}
+
+.designer-profiles {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.designer-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;   /* keep a consistent card width */
+}
+
+.designer-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;    /* keeps face centered, no stretching */
+  object-position: center; /* make sure it centers on the face */
+}
+
+.designer-name {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #fff;
+  text-align: center;
+}
+
+.designer-links {
+  margin-top: 0.3rem;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.designer-links a {
+  color: #00d4ff;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.designer-links a:hover {
+  color: #28b8be;
+}

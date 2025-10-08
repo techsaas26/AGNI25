@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react';
 
 // Image lists: place these files in the public/ folder
-const AGENDA_IMAGES = ['/d1.png', '/d2.png', '/d3.png'];
-const PROSHOW_IMAGES = ['/p1.png', '/p2.png', '/p3.png'];
+const AGENDA_IMAGES = ['/cs.jpg', '/cs.jpg', '/cs.jpg'];
 
 const AGENDAS = AGENDA_IMAGES.map((src, i) => ({ day: `Day ${i + 1}`, images: [src] }));
-const PROSHOWS = PROSHOW_IMAGES.map((src, i) => ({ day: `Day ${i + 1}`, images: [src] }));
 
 function DayCard({ title, images, onOpen }) {
   const mainSrc = images && images.length ? images[0] : null;
@@ -72,21 +70,6 @@ function Schedule() {
           <div className="day-cards">
             {AGENDAS.map((a, i) => (
               <DayCard key={i} title={a.day} images={a.images} onOpen={(src) => setModalSrc(src)} />
-            ))}
-          </div>
-        </section>
-
-        {/* Proshows Section */}
-        <section className="schedule-section" style={{ marginTop: '2rem' }}>
-          <h2
-            className="display-font headline-sandal"
-            style={{ textAlign: 'left', marginBottom: '1rem', fontSize: '1.6rem', color: '#ffd166' }}
-          >
-            Proshows
-          </h2>
-          <div className="day-cards">
-            {PROSHOWS.map((p, i) => (
-              <DayCard key={i} title={p.day} images={p.images} onOpen={(src) => setModalSrc(src)} />
             ))}
           </div>
         </section>

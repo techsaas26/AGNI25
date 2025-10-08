@@ -113,7 +113,7 @@ body {
 
 /* Palette background utility: uses Palette.png from public/ */
 .palette-bg {
-  background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.55)), url('/Palette.png');
+  background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.55)), url('/background.png');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -128,7 +128,7 @@ body {
 
 /* Palette 2 background utility: uses Palette-2.PNG from public/ */
 .palette2-bg {
-  background-image: linear-gradient(rgba(0,0,0,0.30), rgba(0,0,0,0.55)), url('/Palette-2.PNG');
+  background-image: linear-gradient(rgba(0,0,0,0.30), rgba(0,0,0,0.55)), url('/background.png');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -149,12 +149,12 @@ body {
 /* Landing background - prescribed design image */
 .landing-bg {
   /* Use the provided landing image with text */
-  background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)), url('/landing-design-with-text.jpg');
+  background-image: url('/landing.png');
   background-size: contain;
   background-position: center top;
   background-repeat: no-repeat;
-  min-height: 100vh;
   width: 100%;
+  height: 100%;
   position: relative;
   z-index: 0;
   background-size: 100% auto;
@@ -164,12 +164,11 @@ body {
 /* Simplified hero tuned for landing-design.png */
 .hero {
   position: relative;
-  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 3rem 1rem;
-  overflow: visible;
+  overflow: hidden;
 }
 .hero-grid, .hero-tile, .hero-img { display: none; }
 .hero-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.35); z-index: 1; }
@@ -178,13 +177,10 @@ body {
 .display-font { font-size: clamp(2.2rem, 6vw, 6.5rem); }
 
 @media (max-width: 700px) {
-  .hero { min-height: 70vh; padding-bottom: 2.5rem; }
+  .hero { padding-bottom: 2.5rem; }
   .hero-content { padding: 2.25rem 1rem; }
   .display-font { font-size: clamp(1.6rem, 8vw, 3rem); }
 }
-
-
-
 
 /* Display font utility */
 .display-font {
@@ -195,8 +191,7 @@ body {
 /* Hero styles */
 .hero {
   position: relative;
-  height: 100vh;
-  overflow: hidden;
+  overflow: visible;
 }
 .hero-grid {
   position: absolute;
@@ -559,11 +554,19 @@ body {
   100% { transform: translateY(110vh); opacity: 0.6; }
 }
 
+/* Hides the scroll buttons on touch devices */
+@media (max-width: 768px) {
+  .scroll-arrow {
+    display: none;
+  }
+}
+
+
 /* Fire rain for other pages */
 .fire-rain-bg {
   position: relative;
   min-height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.55)), url('/Palette.png');
+  background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.55)), url('/background.png');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -715,3 +718,11 @@ body {
   .day-img { height: 64px; }
 }
 
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .merch-scroller {
+    flex-direction: column; /* Stack the cards vertically */
+    align-items: center;    /* Center the cards in the stack */
+    overflow-x: hidden;     /* Hide horizontal overflow */
+  }
+}
