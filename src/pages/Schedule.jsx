@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from 'react';
+import './Schedule.css'; // Import the stylesheet
 
 // Image lists: place these files in the public/ folder
 const AGENDA_IMAGES = ['/cs.jpg', '/cs.jpg', '/cs.jpg'];
 
+// Helper to create the agenda objects
 const AGENDAS = AGENDA_IMAGES.map((src, i) => ({ day: `Day ${i + 1}`, images: [src] }));
 
+/**
+ * Component for a single day's card, displaying an image that can be clicked to open a modal.
+ */
 function DayCard({ title, images, onOpen }) {
   const mainSrc = images && images.length ? images[0] : null;
   return (
@@ -17,6 +22,7 @@ function DayCard({ title, images, onOpen }) {
             alt={`${title}`}
             className="day-main-img"
             onClick={() => onOpen(mainSrc)}
+            // Basic error handling for image loading
             onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = mainSrc; }}
           />
         )}
@@ -25,9 +31,13 @@ function DayCard({ title, images, onOpen }) {
   );
 }
 
+/**
+ * Main Schedule component, handling the background, layout, and image modal.
+ */
 function Schedule() {
   const [modalSrc, setModalSrc] = useState(null);
 
+  // Effect to close the modal when the 'Escape' key is pressed
   useEffect(() => {
     const onKey = (e) => { if (e.key === 'Escape') setModalSrc(null); };
     window.addEventListener('keydown', onKey);
@@ -36,7 +46,7 @@ function Schedule() {
 
   return (
     <div className="fire-rain-bg palette-bg">
-      {/* Fire overlay drops */}
+      {/* Fire overlay drops (For the visual effect) */}
       <div className="fire-rain-overlay">
         {Array.from({ length: 30 }).map((_, i) => (
           <div
@@ -61,28 +71,33 @@ function Schedule() {
 
         {/* Agendas Section */}
         <section className="schedule-section">
-          <h2
-            className="display-font headline-sandal"
-            style={{ textAlign: 'left', marginBottom: '1rem', fontSize: '1.6rem', color: '#ffd166' }}
-          >
-            Agendas
-          </h2>
           <div className="day-cards">
             {AGENDAS.map((a, i) => (
-              <DayCard key={i} title={a.day} images={a.images} onOpen={(src) => setModalSrc(src)} />
+              <DayCard
+                key={i}
+                title={a.day}
+                images={a.images}
+                onOpen={(src) => setModalSrc(src)}
+              />
             ))}
           </div>
         </section>
 
-        {/* Modal */}
+        {/* Modal - Renders only when modalSrc is set */}
         {modalSrc && (
           <div
             className="img-modal-overlay"
             role="dialog"
             aria-modal="true"
+            // Click outside closes the modal
             onClick={() => setModalSrc(null)}
           >
-            <div className="img-modal-content" onClick={(e) => e.stopPropagation()}>
+            <div
+              className="img-modal-content"
+              // Stop propagation so clicking content doesn't close the modal
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Close button with '×' */}
               <div className="img-modal-close" onClick={() => setModalSrc(null)}>
                 ×
               </div>

@@ -455,7 +455,12 @@ function Events() {
       <div className="smoke smoke-right"></div>
       
       <div className="events-content">
-        <h1 className="events-title">Events</h1>
+        <h1
+          className="display-font headline-sandal"
+          style={{ marginBottom: '2rem', textAlign: 'center', fontSize: '2.8rem', color: '#e6b800' }}
+        >
+          Events
+        </h1>
 
         {/* --- FIXED: Category cards now use the robust CATEGORY_CONFIG --- */}
         {!selectedCategory && (
