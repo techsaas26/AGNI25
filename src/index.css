@@ -104,7 +104,8 @@ button:hover {
 }
 
 body {
-  background: linear-gradient(135deg, #ff4e50, #f9d423, #ff6a00, #ee0979);
+  background: radial-gradient(1400px 700px at 50% 120%, rgba(0, 70, 30, 0.6), rgba(0, 0, 0, 0) 70%),
+              linear-gradient(180deg, #0b3d2e 0%, #062a20 50%, #021a13 100%);
   background-size: 400% 400%;
   animation: gradientFire 15s ease infinite;
   color: #fff;
