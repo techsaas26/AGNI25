@@ -471,8 +471,8 @@
 .event-card {
   position: relative;
   width: 100%;
-  max-width: 320px;
-  height: 460px; /* portrait */
+  max-width: 400px;
+  height: 300px; /* portrait */
   border-radius: 12px;
   overflow: hidden;
   cursor: pointer;

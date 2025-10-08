@@ -149,8 +149,8 @@ const merchInfo = {
   title: 'Concert Night T-Shirt',
   description: 'Wear the spirit of festivity at concert night!',
   prices: [
-    '<strong>Buy one</strong> T‑shirt @ Rs 149/-',
-    'For bulk of <strong>5</strong> T‑shirts @ Rs 699/-',
+    '<strong>Buy one</strong> T‑shirt @ Rs 180/-',
+    'For bulk of <strong>5</strong> T‑shirts @ Rs 800/-',
   ],
   promo: 'WEAR THE T‑SHIRT AND MEET OUR SINGERS ON CONCERT DAY!',
   formLink: 'https://forms.gle/iMcqkxu2cX6GywPN9',

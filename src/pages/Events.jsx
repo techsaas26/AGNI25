@@ -64,7 +64,7 @@ function Events() {
           title: 'Club - AUSEC • Bizzare Bazaar',
           description: 'Sell the quirkiest products in the most creative ways. Wit and persuasion rule this hilarious marketing showdown!',
           pricing: 'Free',
-          image: '/clubs.jpg',
+          image: '/bazar.jpg',
         },
         {
           title: "Club - CSAU • Hit Bull's Eye",
@@ -88,7 +88,7 @@ function Events() {
           title: 'Club - Maathavam • நீ தான்டா Artist uhh',
           description: 'Dive into colors, sounds and flavors of Tamil culture with events that entertain, inspire and celebrate tradition!',
           pricing: 'Free',
-          image: '/clubs.jpg',
+          image: '/Maathavam.jpg',
         },
         {
           title: 'Club - Pixels • Bid for the Shot',
@@ -138,7 +138,7 @@ function Events() {
           title: 'Club - Astro • Balloon Buzz',
           description: 'Pick a balloon, pop it and collect letters to form astronomy-themed words—speed, strategy and stellar fun!',
           pricing: 'Free',
-          image: '/clubs.jpg',
+          image: '/balloon.png',
         },
         {
           title: 'Club - AU Podium • Roast vs Defend',
@@ -150,7 +150,7 @@ function Events() {
           title: 'Club - AUSEC • Money Feud',
           description: 'An entrepreneurial game show—startup surveys, quirky crises and money-sense challenges collide.',
           pricing: 'Free',
-          image: '/clubs.jpg',
+          image: '/money.jpg',
         },
         {
           title: 'Club - EQ • Veil of Doubt',
@@ -277,25 +277,35 @@ function Events() {
         {
           title: 'Club - Sruthilaya • Solo Singing',
           description: 'Solo Singing Competition',
-          pricing: 'Free',
+          pricing: 'paid',
+          purchaseLink: 'https://forms.gle/Yyr9LJqM3m6GEpG68',
+          pricingDetails: 'On-the-spot registrations available',
           image: '/Solo singing -1.png',
         },
         {
           title: 'Club - Sruthilaya • Solo Instrumentation',
           description: 'Solo Instrumentation Competition',
-          pricing: 'Free',
+          pricing: 'paid',
+          purchaseLink: 'https://forms.gle/mdcVga5cjgio4u447',
+          pricingDetails: 'On-the-spot registrations available',
           image: '/Solo instru -1.png',
         },
         {
           title: 'Club - Saptham • Nadha Vaibhavam',
           description: 'The music and instrumentals solo competition',
-          pricing: 'Free',
+          pricing: 'paid',
+          club: 'Saptham',
+          purchaseLink: 'https://forms.gle/iJi86absjCCAjG2j6',
+          pricingDetails: 'On-the-spot registrations available',
           image: '/Agni Posters.zip - 3.png',
         },
         {
           title: 'Club - Saptham • Natya Vaibhavam',
           description: 'Step into the world of rhythm, expression and tradition! The bharatnatyam solo competition',
-          pricing: 'Free',
+          pricing: '100',
+          club: 'Saptham',
+          purchaseLink: 'https://forms.gle/XxYda1NbbLsknUin8',
+          pricingDetails: 'On-the-spot registrations available',
           image: '/Agni Posters.zip - 1.png',
         },
       ],
@@ -307,27 +317,27 @@ function Events() {
           image: '/i1.png',
         },
         {
-          title: 'Solo Dance',
+          title: 'Club - Twisters • Solo Dance',
           description: 'Own the spotlight with your unique moves. Bring your passion and ignite the stage!',
-          pricing: 'Free',
+          pricing: 'paid',
           image: '/soloDance.jpeg',
           club: 'Twisters',
           purchaseLink: 'https://forms.gle/ejovES9kG1H3YQsc7',
           pricingDetails: 'On-the-spot registrations available'
         },
         {
-          title: 'Duo Dance',
+          title: 'Club - Twisters • Duo Dance',
           description: 'Showcase your coordination and chemistry as a dynamic duo.',
-          pricing: 'Free',
+          pricing: 'paid',
           image: '/DuoDance.jpeg',
           club: 'Twisters',
           purchaseLink: 'https://forms.gle/CEz3bakbDZbdSuMm6',
           pricingDetails: 'On-the-spot registrations available'
         },
         {
-          title: 'Adaptunes',
+          title: 'Club - Twisters • Adaptunes',
           description: 'Test your spontaneity as you groove to surprise tracks. Creativity and speed win the day!',
-          pricing: 'Free',
+          pricing: 'paid',
           image: '/Adaptunes.jpeg',
           club: 'Twisters',
           purchaseLink: 'https://forms.gle/N3ruyJXsj77XpQhR7',
@@ -559,7 +569,7 @@ function Events() {
                     </button>
                   )}
                   
-                  {/* This button shows only for Signature Events without a Google Form link */}
+                  {/* This button shows only for Signature Events without a Google Form link
                   {selectedCategory === 'Signature Events' && !currentEvent.purchaseLink && (
                     <button
                       className="register-button"
@@ -569,7 +579,7 @@ function Events() {
                       {registering ? 'Registering…' : 'Register Now'}
                     </button>
                   )}
-                  
+                   */}
                   <button
                     className="back-button"
                     onClick={() => setModalOpen(false)}
