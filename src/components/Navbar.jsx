@@ -214,7 +214,7 @@ function Navbar() {
       <NavbarStyles />
       <nav className="navbar">
         <Link to="/" className="navbar-logo" onClick={closeMenu}>
-          <img src="/logo1.png" alt="AGNI Logo" />
+          <img src="/agni-logo.png" alt="AGNI Logo" />
           <h1>AGNI'25</h1>
         </Link>
 
