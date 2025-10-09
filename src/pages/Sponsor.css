@@ -1,0 +1,97 @@
+/* General container for the entire sponsor section */
+.sponsor-section {
+    position: relative;
+    padding: 60px 20px;
+    background-image: url('/assets/background.png'); /* Path from public folder */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Cool parallax effect */
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Dark overlay to make the text pop */
+.sponsor-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(10, 25, 47, 0.8); /* Dark blue overlay */
+    z-index: 1;
+}
+
+/* Content wrapper to sit on top of the overlay */
+.sponsor-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Main title styling */
+.sponsor-main-title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 800;
+  color: #ff6b00;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 
+    0 0 10px rgba(255, 107, 0, 0.8),
+    0 0 20px rgba(255, 107, 0, 0.6),
+    2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Container for each sponsor category (e.g., "Associate Sponsors") */
+.sponsor-group {
+    margin-bottom: 50px;
+}
+
+/* Category title styling */
+.sponsor-category-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #64ffda;
+    display: inline-block;
+}
+
+/* Flex container for the logos in a group */
+.sponsor-logos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; /* Space between logos */
+}
+
+/* Wrapper for each individual logo */
+.sponsor-logo-wrapper {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Styling for the sponsor images */
+.sponsor-logo {
+    max-height: 80px; /* Adjust based on your logo sizes */
+    max-width: 160px;
+    object-fit: contain;
+    filter: grayscale(50%); /* Subtle desaturation */
+    transition: filter 0.3s ease;
+}
+
+/* Hover effects for logos */
+.sponsor-logo-wrapper:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(100, 255, 218, 0.4);
+}
+
+.sponsor-logo-wrapper:hover .sponsor-logo {
+    filter: grayscale(0%); /* Full color on hover */
+}

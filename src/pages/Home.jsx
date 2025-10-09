@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import TeamMemberCard from "../components/TeamMemberCard";
 import Herosection from "../components/Herosection";
-
 function Home() {
   const [teamMembers, setTeamMembers] = useState([]);
 
@@ -67,6 +66,7 @@ function Home() {
           </p>
         </div>
       </section>
+
 
       {/* 🟢 MAIN EVENTS */}
       <section

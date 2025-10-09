@@ -174,6 +174,7 @@ const NavbarStyles = () => {
 const navLinks = [
   { path: '/', text: 'Home' },
   { path: '/events', text: 'Events' },
+  { path: '/sponsors', text: ' Sponsors' },
   { path: '/merch', text: 'Merch' },
   { path: '/schedule', text: 'Schedule' },
   // { path: '/#team', text: 'Team', isAnchor: true },

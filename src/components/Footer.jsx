@@ -4,8 +4,8 @@ import "./Footer.css";
 // Import images
 import krishnenduImg from "/Krishnendu.JPG";
 import krisnaImg from "/Krisna.jpeg";
-import AbiramiImg from "/logo1.png";
-import SuchitraImg from "/logo1.png";
+import AbiramiImg from "/abirami.jpg";
+import SuchitraImg from "/suchitra.jpg";
 
 const Footer = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -26,13 +26,13 @@ const Footer = () => {
     },
     {
       img: AbiramiImg,
-      name: "Abirami",
+      name: "Abirami R",
       instagram: "https://www.instagram.com/abiramiii.r/?hl=en",
       linkedin: "https://www.linkedin.com/in/abirami-ramanathan-707521285/",
     },
     {
       img: SuchitraImg,
-      name: "Suchitra",
+      name: "Suchitra S",
       instagram: "https://www.instagram.com/suchitra_sidd",
       linkedin: "https://www.linkedin.com/in/suchitra-siddharthan-6838292aa/",
     },

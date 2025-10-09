@@ -1,0 +1,86 @@
+/* Main section with background */
+.home-sponsors-section {
+    position: relative;
+    padding: 80px 0;
+    background-image: url('/background.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Dark overlay for readability */
+.home-sponsors-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(10, 25, 47, 0.85);
+    z-index: 1;
+}
+
+/* Content wrapper */
+.home-sponsors-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.home-sponsors-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 50px;
+    color: #ffffff; /* Accent color */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* This container creates the fade-out effect on the left and right */
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+}
+
+/* The scrolling track */
+.marquee-track {
+    display: flex;
+    width: max-content;
+    animation: scroll 60s linear infinite;
+}
+
+.marquee-container:hover .marquee-track {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+/* Sponsor card styling */
+.sponsor-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    margin: 0 25px;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.sponsor-card:hover {
+    transform: scale(1.05);
+    background-color: white;
+}
+
+/* Logo image styling -- MODIFIED HERE -- */
+.sponsor-logo-img {
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    /* Removed the filter property to ensure logos are always in full color */
+}
