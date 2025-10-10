@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 import './Schedule.css'; // Import the stylesheet
 
 // Image lists: place these files in the public/ folder
-const AGENDA_IMAGES = ['/cs.jpg', '/cs.jpg', '/cs.jpg'];
+const AGENDA_IMAGES = ['/agenda/d11.png', '/agenda/d12.png'];
 
 // Helper to create the agenda objects
-const AGENDAS = AGENDA_IMAGES.map((src, i) => ({ day: `Day ${i + 1}`, images: [src] }));
+const AGENDAS = AGENDA_IMAGES.map((src, i) => ({ images: [src] }));
 
 /**
  * Component for a single day's card, displaying an image that can be clicked to open a modal.
@@ -66,7 +66,7 @@ function Schedule() {
           className="display-font headline-sandal"
           style={{ marginBottom: '2rem', textAlign: 'center', fontSize: '2.8rem', color: '#e6b800' }}
         >
-          Schedule
+          Schedule - 10/10/2025
         </h1>
 
         {/* Agendas Section */}
