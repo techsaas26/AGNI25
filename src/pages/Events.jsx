@@ -311,7 +311,7 @@ function Events() {
       ],
       'Day 2': [
         { 
-          title: 'Club - Intra Variety • Echoes of The Past',
+          title: 'Club - Spartans • Intra Variety Echoes of The Past',
           description: 'Dig the past and have fun!',
           pricing: 'Free',
           image: '/i1.png',
