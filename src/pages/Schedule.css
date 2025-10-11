@@ -103,6 +103,7 @@
   .day-card {
     width: 90%;
     max-width: 400px;
+    height : auto;
   }
   
   h1 {
