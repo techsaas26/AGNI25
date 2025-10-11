@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './Schedule.css'; // Import the stylesheet
 
 // Image lists: place these files in the public/ folder
-const AGENDA_IMAGES = ['/agenda/d11.png', '/agenda/d12.png'];
+const AGENDA_IMAGES = ['/agenda/d11.jpg', '/agenda/d12.jpg'];
 
 // Helper to create the agenda objects
 const AGENDAS = AGENDA_IMAGES.map((src, i) => ({ images: [src] }));
